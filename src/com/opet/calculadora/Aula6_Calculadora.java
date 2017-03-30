@@ -1,13 +1,25 @@
 package com.opet.calculadora;
 
+import com.opet.util.Reader;
+
 public class Aula6_Calculadora
 {
 
-    public static void main(String[] args)
+    public static void main(String[] args) throws Exception
     {
-        int valor = 1;
-        double soma = calcular("/", 2, 5);
-        System.out.println(soma);
+
+
+        System.out.println("Digite a operação desejada (+,-,*,/");
+        String operacao = Reader.readString();
+
+        System.out.println("Digite o primeiro número");
+        double primeiroValor = Reader.readDouble();
+
+        System.out.println("Digite o segundo número");
+        double segundoValor = Reader.readDouble();
+
+        double resultado = calcular(operacao, primeiroValor, segundoValor);
+        System.out.println("Resultado é "+resultado);
 
     }
 
